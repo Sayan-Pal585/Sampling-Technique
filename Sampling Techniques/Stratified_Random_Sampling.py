@@ -23,7 +23,7 @@ trim_list = cont['trim']
 
 #Picking Random Sample
 count = 0
-df_final = pf.DataFrame
+df_final = pd.DataFrame
 for i in trim_list.values:
     n_samples = int(cont['Sample_pick'][cont['trim']==i].values[0])
     df_temp = population[population['vehicle_trim']==i].sample(n=n_samples, replace = True)
